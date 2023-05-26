@@ -5,9 +5,9 @@ import { faker } from '@faker-js/faker'
 
 export class GetStorageSpy implements GetStorage {
     key: string
-    value: any = faker.string.alpha()
+    value: string = faker.string.alpha()
     
-    get (key: string): any {
+    get (key: string): string {
         this.key = key
         return this.value
     }

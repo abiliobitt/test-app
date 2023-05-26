@@ -9,11 +9,11 @@ export const mockHttpRequest = (): HttpRequest => ({
     headers: faker.helpers.objectValue({ myHeader: 'myHeader' })
 })
 
-export class HttpClientSpy<R = any> implements HttpClient<R> {
+export class HttpClientSpy<R = unknown> implements HttpClient<R> {
     url?: string
     method?: string
-    body?: any
-    headers?: any
+    body?: unknown
+    headers?: unknown
     response: HttpResponse<R> = {
         statusCode: HttpStatusCode.ok
     }
